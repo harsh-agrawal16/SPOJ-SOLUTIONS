@@ -11,6 +11,7 @@ int main(){
   ll f,s,g,u,d,curr;
   cin>>f>>s>>g>>u>>d;
 
+  bool found = false;
   ll clicks[f+1]; //to keep count of the no of button presses to reach the respective floor
   bool visited[f+1]; // to keep track of visited nodes
   memset(visited,false,sizeof(visited));
@@ -38,7 +39,6 @@ int main(){
       visited[curr-d] = true;
       clicks[curr-d] = clicks[curr]+1;
       q.push(curr-d);
-    }
     }
   }
 
